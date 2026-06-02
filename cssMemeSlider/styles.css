@@ -85,3 +85,24 @@ input#slide3:checked~.slider__labels>label[for='slide3'],
 input#slide4:checked~.slider__labels>label[for='slide4'] {
     background-color: transparent;
 }
+
+.slider__description {
+    display: flex;
+}
+
+.slider__description>div {
+    padding-top: 2em;
+    text-align: center;
+    width: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+input#slide1:checked~.slider__description>div[data-slide-index='1'],
+input#slide2:checked~.slider__description>div[data-slide-index='2'],
+input#slide3:checked~.slider__description>div[data-slide-index='3'],
+input#slide4:checked~.slider__description>div[data-slide-index='4'] {
+    width: 100%;
+    opacity: 1;
+}
