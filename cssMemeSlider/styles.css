@@ -90,6 +90,7 @@
 .slider__labels>label:hover {
     background-color: gray;
     border-color: gray;
+    cursor: pointer;
 }
 
 input#slide1:checked~.slider__labels>label[for='slide1'],
