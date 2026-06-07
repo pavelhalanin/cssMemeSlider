@@ -72,12 +72,14 @@
 .slider__labels {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-
-    padding-top: 1em;
 }
 
 .slider__labels>label {
+    padding: 1rem;
+}
+
+.slider__labels>label>span {
+    display: block;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -88,15 +90,19 @@
 }
 
 .slider__labels>label:hover {
+    cursor: pointer;
+}
+
+.slider__labels>label:hover>span {
     background-color: gray;
     border-color: gray;
     cursor: pointer;
 }
 
-input#slide1:checked~.slider__labels>label[for='slide1'],
-input#slide2:checked~.slider__labels>label[for='slide2'],
-input#slide3:checked~.slider__labels>label[for='slide3'],
-input#slide4:checked~.slider__labels>label[for='slide4'] {
+input#slide1:checked~.slider__labels>label[for='slide1']>span,
+input#slide2:checked~.slider__labels>label[for='slide2']>span,
+input#slide3:checked~.slider__labels>label[for='slide3']>span,
+input#slide4:checked~.slider__labels>label[for='slide4']>span {
     background-color: transparent;
 }
 
