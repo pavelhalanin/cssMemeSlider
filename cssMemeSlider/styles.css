@@ -99,6 +99,11 @@
     cursor: pointer;
 }
 
+.slider__labels>label:active>span {
+    background-color: #575656;
+    border-color: #575656;
+}
+
 input#slide1:checked~.slider__labels>label[for='slide1']>span,
 input#slide2:checked~.slider__labels>label[for='slide2']>span,
 input#slide3:checked~.slider__labels>label[for='slide3']>span,
