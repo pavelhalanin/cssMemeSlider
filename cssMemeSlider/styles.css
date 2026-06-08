@@ -1,0 +1,140 @@
+.slider__wrapper {
+    overflow: hidden;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.slider__wrapper>input {
+    display: none;
+}
+
+.slider__images {
+    display: flex;
+    width: 80vw;
+    height: 40vh;
+}
+
+.slider__image_block {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 40vh;
+}
+
+.slider__image_block:nth-child(1) {
+    background-color: red;
+}
+
+.slider__image_block:nth-child(2) {
+    background-color: yellow;
+}
+
+.slider__image_block:nth-child(3) {
+    background-color: green;
+}
+
+.slider__image_block:nth-child(4) {
+    background-color: blue;
+}
+
+.slider__image_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__image_block>img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.slider__images {
+    transition: all 1s ease-in-out;
+}
+
+#slide1:checked~.slider__images {
+    transform: translateX(0%);
+}
+
+#slide2:checked~.slider__images {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.slider__images {
+    transform: translateX(-200%);
+}
+
+#slide4:checked~.slider__images {
+    transform: translateX(-300%);
+}
+
+.slider__labels {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 32rem) {
+  .slider__labels {
+    justify-content: end;
+  }
+}
+
+.slider__labels>label {
+    padding: 1rem;
+}
+
+.slider__labels>label>span {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #06c;
+    border: 0.2rem solid #06c;
+
+    transition: all 0.5s ease;
+}
+
+.slider__labels>label:hover {
+    cursor: pointer;
+}
+
+.slider__labels>label:hover>span {
+    background-color: gray;
+    border-color: gray;
+    cursor: pointer;
+}
+
+.slider__labels>label:active>span {
+    background-color: #575656;
+    border-color: #575656;
+}
+
+input#slide1:checked~.slider__labels>label[for='slide1']>span,
+input#slide2:checked~.slider__labels>label[for='slide2']>span,
+input#slide3:checked~.slider__labels>label[for='slide3']>span,
+input#slide4:checked~.slider__labels>label[for='slide4']>span {
+    background-color: transparent;
+}
+
+.slider__description {
+    display: flex;
+}
+
+.slider__description>div {
+    padding-top: 1em;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    height: 0;
+}
+
+input#slide1:checked~.slider__description>div[data-slide-index='1'],
+input#slide2:checked~.slider__description>div[data-slide-index='2'],
+input#slide3:checked~.slider__description>div[data-slide-index='3'],
+input#slide4:checked~.slider__description>div[data-slide-index='4'] {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
