@@ -117,7 +117,6 @@ input#slide4:checked~.slider__labels>label[for='slide4']>span {
 
 .slider__description>div {
     padding-top: 2em;
-    text-align: center;
     width: 0;
     overflow: hidden;
     transition: opacity 1s ease-in-out;
