@@ -11,13 +11,13 @@
 .slider__images {
     display: flex;
     width: 80vw;
-    height: 50vh;
+    height: 40vh;
 }
 
 .slider__image_block {
     flex: 0 0 100%;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
 }
 
 .slider__image_block:nth-child(1) {
@@ -122,7 +122,7 @@ input#slide4:checked~.slider__labels>label[for='slide4']>span {
 }
 
 .slider__description>div {
-    padding-top: 2em;
+    padding-top: 1em;
     width: 0;
     overflow: hidden;
     transition: opacity 1s ease-in-out;
