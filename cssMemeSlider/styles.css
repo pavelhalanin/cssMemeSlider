@@ -74,6 +74,12 @@
     justify-content: center;
 }
 
+@media screen and (min-width: 32rem) {
+  .slider__labels {
+    justify-content: end;
+  }
+}
+
 .slider__labels>label {
     padding: 1rem;
 }
